@@ -1,207 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio-project</title>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-  </head>
-  <body>
-    <div class="container">
-      <video
-        class="back-vid"
-        autoplay
-        loop
-        muted
-        plays-inline
-        src="videos/galaxy.mp4"
-      ></video>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sustainable Goa Tourism</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: url('goa-main.jpg') no-repeat center center/cover;
+      color: white;
+      height: 65vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5);
+    }
+    header h1 {
+      position: relative;
+      font-size: 3rem;
+      background-color: rgba(0,0,0,0.6);
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      z-index: 1;
+    }
+    nav {
+      background: #00796B;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: #FFD700;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+    }
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .card-content {
+      padding: 1rem;
+    }
+    .card-content h3 {
+      margin-bottom: 0.5rem;
+      color: #00796B;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
+    }
+    .btn {
+      display: inline-block;
+      background: #00796B;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: #004D40;
+    }
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    }
+    form .form-group {
+      margin-bottom: 1rem;
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    footer {
+      background: #004D40;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Explore Sustainable Tourism in Goa</h1>
+  </header>
 
-      <header>
-        <div class="left">
-          <h2><span class="gradient">DEVE</span>LOPER</h2>
-        </div>
-        <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">Projects</a></li>
-        </ul>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#eco">Eco-Spots</a>
+    <a href="#tips">Green Tips</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-        <div class="box-icons">
-          <p><i class="bx bxl-youtube"></i></p>
-          <p><i class="bx bxl-github"></i></p>
-          <p><i class="bx bxl-linkedin-square"></i></p>
-        </div>
-      </header>
+  <section id="about">
+    <h2>Why Sustainable Tourism Matters</h2>
+    <p>Goa is a treasure of biodiversity and culture. With growing tourist numbers, it faces challenges like pollution, overcrowding, and cultural erosion. Our mission is to raise awareness and promote travel that protects and celebrates Goa's natural beauty and heritage.</p>
+  </section>
 
-      <section class="hero">
-        <div
-          class="hero-info autoBlur"
-        >
-          <div class="hero-info-title ">
-            <i class="bx bxl-sketch"></i>
-            Front-end Developer Portfolio
-          </div>
-
-          <h1>
-            Providing <span class="gradient">the best</span> Project
-            <span class="gradient">Experience</span>
-          </h1>
-
-          <p>
-            I'm a front-end and back-end developer. Check out my projects and
-            skills.
-          </p>
-
-          <button><i class="bx bx-send"></i> Contact Me</button>
-        </div>
-
-        <div class="skills-video-box">
-          <video
-            class="skills-video autoBlur"
-            autoplay
-            loop
-            muted
-            plays-inline
-            src="videos/glob.mp4"
-          ></video>
-        </div>
-
-        <div class="scroll-down"></div>
-      </section>
-
-      <seaction class="info-section">
-        <h1 class="section-title autoDisplay">Hello,There👋</h1>
-        <div class="info-cards">
-          <div class="card">
-            <h1>Hi there, I'm Zameer</h1>
-            <p>
-              With 1 years of experience, I have honed my skills in both
-              frontend and backend dev, creating dynamic and responsive
-              websites.
-            </p>
-
-            <img src="images/grid1.png" alt="" />
-          </div>
-
-          <div class="card">
-            <h1>Tech Stack</h1>
-            <p>
-              I specialize in a variety of languages, frameworks, and tools that
-              allow me to build robust and scalable applications.
-            </p>
-
-            <img src="images/grid2.png" alt="" />
-          </div>
-
-          <div class="card">
-            <h1>I’m very flexible with time zone communications & locations</h1>
-            <p>I'm based in Italy, Bari and open to remote work worldwide.</p>
-
-            <video
-              src="videos/hero-video.mp4"
-              autoplay
-              loop
-              muted
-              plays-inline
-            ></video>
-
-            <button><i class="bx bx-send"></i> Contact Me</button>
-          </div>
-
-          <div class="card">
-            <h1>My Passion for Coding</h1>
-            <p>
-              I love solving problems and building things through code.
-              Programming isn't just my profession—it's my passion. I enjoy
-              exploring new technologies, and enhancing my skills.
-            </p>
-
-            <img src="images/grid4.png" alt="" />
-          </div>
-        </div>
-      </seaction>
-
-      <section class="skills-section">
-        <h1 class="section-title autoDisplay">My Skills 💪</h1>
-        <div class="skills-box autoDisplay">
-          <img class="skills-image" src="images/digital brain (2).png" alt="" />
-          <div class="Designer">
-            <h1 class="gradient">Designer <i class="bx bx-laptop"></i></h1>
-            <p>
-              I have expertise in HTML, CSS, JavaScript, and design tools like
-              Figma and Adobe XD. My strength lies in blending aesthetics with
-              functionality to create seamless user experiences.
-            </p>
-          </div>
-
-          <div class="coder">
-            <h1 class="gradient">Coder <i class="bx bx-code-block"></i></h1>
-            <p>
-              I’m skilled in HTML, CSS and JavaScript and frameworks like bootstrap. I also have experience with database management using
-               MySQL.
-            </p>
-          </div>
-
-        
-      </section>
-
-      <section class="contact-section">
-        <h1 class="section-title autoDisplay">Let's talk😊</h1>
-
-        <div class="social-box autoBlur">
-          <a href="#"><i class="bx bxs-phone"></i> +39 111 222 444</a>
-          <a href="#"><i class="bx bxl-telegram"></i> Contact Example.com</a>
-          <a href="#"
-            ><i class="bx bxl-linkedin-square"></i> Contact Example.com</a
-          >
-          <div class="social-icons">
-            <a href="#"><i class="bx bxl-youtube"></i></a>
-            <a href="#"><i class="bx bxl-twitter"></i></a>
-            <a href="#"><i class="bx bxl-facebook-circle"></i></a>
-          </div>
-        </div>
-
-        <div class="contact-box autoBlur">
-          <p>
-            Wheter you're looking to build a new website, improve your existing
-            platform, or bring a unique project to file.Contact Me.
-          </p>
-
-          <form action="index.html">
-            
-          <p>Full Name</p>
-          <input placeholder="Your Full name" type="full name" />
-
-          <p>Email Address</p>
-          <input placeholder="Your Email" type="Contact" />
-
-          <p>Your Message</p>
-          <input
-            class="input-message"
-            type="contact"
-            placeholder="shaire your thoughts..."
-          />
-
-          <button>Send Message <i class="bx bx-mail-send"></i></button>
-          </form>
-        </div>
-      </section>
-
-      <section class="footer">
-        <h1>©️2025, Copywrites are reserved ...</h1>
-        <div class="box-icons">
-          <p><i class="bx bxl-youtube"></i></p>
-          <p><i class="bx bxl-github"></i></p>
-          <p><i class="bx bxl-linkedin-square"></i></p>
-        </div>
-      </section>
+  
+  <section id="eco">
+    <h2>Eco-Friendly Places to Visit</h2>
+    <div class="cards">
+  <div class="card">
+    <img src="wildlife.jpg" alt="Wildlife Sanctuary">
+    <div class="card-content">
+      <h3>Bhagwan Mahavir Wildlife Sanctuary</h3>
+      <p>Discover Goa's rich flora and fauna in its largest protected forest area.</p>
     </div>
-    <script src="app.js"></script>
-  </body>
+  </div>
+  <div class="card">
+    <img src="charo.jpg" alt="Sustainable Village">
+    <div class="card-content">
+      <h3>Chorao Island</h3>
+      <p>Experience peaceful backwaters and visit Dr. Salim Ali Bird Sanctuary.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="palolam.jpg" alt="Clean Beach">
+    <div class="card-content">
+      <h3>Palolem Beach</h3>
+      <p>One of the cleanest beaches, ideal for eco-conscious travelers.</p>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+  <section id="tips">
+    <h2>Eco-Travel Tips</h2>
+    <ul>
+      <li>Carry a reusable water bottle and avoid plastic waste.</li>
+      <li>Support local artisans and sustainable accommodations.</li>
+      <li>Respect wildlife and avoid littering in nature spots.</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Sustainable Goa Tourism | Built with ❤️ using HTML, CSS, and JavaScript</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      if (!name || !email || !message) {
+        alert("Please fill in all fields.");
+        event.preventDefault();
+        return;
+      }
+
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+      } else {
+        alert("Thank you for contacting us! We'll get back to you soon.");
+      }
+    });
+  </script>
+</body>
 </html>
